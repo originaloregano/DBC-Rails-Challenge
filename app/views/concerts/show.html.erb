@@ -1,0 +1,17 @@
+<h2><%= @concert.band %></h2>
+
+<p>Location: <%= @concert.venue %></p>
+<p>Date: <%= @concert.date.strftime("%B, %d, %Y") %></p>
+<p>Time: <%= @concert.start_time.strftime("%I:%M %p") %></p>
+
+
+<h2>Attendees</h2>
+<div id="attendance-form">	
+	<% if logged_in? %>
+		<%= render partial: '/attendances/new' %>
+	<% end %>
+</div>
+
+<div class="attendance-list">
+	<%= render partial: '/attendances/index' %>
+</div>

@@ -1,0 +1,4 @@
+	<!-- remote: true, If set to true, will allow the Unobtrusive JavaScript drivers to control the submit behavior. By default this behavior is an ajax submit. -->
+	<p id="attendance-form"><%= button_to "Attend", concert_attendances_path(@concert, Attendance.new), remote: true %></p>
+
+		<!-- button defaults to "post" -->

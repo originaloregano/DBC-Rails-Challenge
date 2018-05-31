@@ -1,0 +1,65 @@
+  [1m[35m (17.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5112612432627781830);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (29.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (11.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5112612432627781830)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-06-01 12:29:35 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (24.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" ORDER BY date ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_concerts_index_html_erb___2426107665191884290_70356679400080 at /Users/aorigitano/Desktop/rails-checkpoint-challenge/app/views/concerts/index.html.erb:4)
+  Rendered concerts/index.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 504ms (Views: 454.5ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/" for ::1 at 2017-06-01 12:35:16 -0500
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (2.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" ORDER BY date ASC[0m
+  Rendered concerts/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 176ms (Views: 161.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-06-01 12:37:40 -0500
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (19.7ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" ORDER BY date ASC[0m
+  Rendered concerts/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 57ms (Views: 35.4ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/" for ::1 at 2017-06-01 12:37:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.9ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" ORDER BY date ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_concerts_index_html_erb___1306197837742557470_70322036736020 at /Users/aorigitano/Desktop/rails-checkpoint-challenge/app/views/concerts/index.html.erb:4)
+  Rendered concerts/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 287ms (Views: 261.7ms | ActiveRecord: 4.3ms)
+
+
